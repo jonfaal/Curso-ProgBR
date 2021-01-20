@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Exercícios</title>
+</head>
+<body>
+  <main>
+    <h1>Exercícios:</h1>
+    <h2>Condicionais e Loops</h2>
+    <div>
+      <h3>01 - Escreva uma função que receba dois números e retorne o maior deles:</h3>
+      <label for="ex01n1">Primeiro número:</br><input type="number" id="ex01n1" value="0"></label><label for="ex01n2">Segundo número:</br><input type="number" id="ex01n2" value="0"></label><button id="ex01btn" onclick="funcEx01(ex01n1.value, ex01n2.value)">Comparar</button>
+      <div class="resultado" id="rEx01"></div>
+    </div>
+
+    <div>
+      <h3>02 - Escreva uma função que receba um Array com 3 números e imprima eles em ordem:</h3>
+      <label for="ex2n1">Preimeiro número</br><input type="number" id="ex02n1"></label><label for="ex02n2">Segundo número</br><input type="number" id="ex02n2"></label><label for="ex02n3">Terceiro número</br><input type="number" id="ex02n3"></label><button onclick="funcEx02(ex02n1.value, ex02n2.value, ex02n3.value)">Ordenar</button>
+      <div class="resultado" id="rEx02"></div>
+    </div>
+
+    <div>
+      <h3>03 - Escreva uma função que receba um Array com 5 números e retorne o maior deles:</h3>
+      <label for="ex3n1">1º número</br><input type="number" id="ex03n1"></label><label for="ex03n2">2º número</br><input type="number" id="ex03n2"></label><label for="ex03n3">3º número</br><input type="number" id="ex03n3"></label><label for="ex03n4">4º número</br><input type="number" id="ex03n4"></label><label for="ex03n5">5º número</br><input type="number" id="ex03n5"></label><button onclick="funcEx03(ex03n1.value, ex03n2.value, ex03n3.value, ex03n4.value, ex03n5.value)">Comparar</button>
+      <div class="resultado" id="rEx03"></div>
+    </div>
+
+    <div>
+      <h3>04 - Escreva uma função que receba um Array com 5 números e retorne a média deles:</h3>
+      <label for="ex4n1">1º número</br><input type="number" id="ex04n1"></label><label for="ex04n2">2º número</br><input type="number" id="ex04n2"></label><label for="ex04n3">3º número</br><input type="number" id="ex04n3"></label><label for="ex04n4">4º número</br><input type="number" id="ex04n4"></label><label for="ex04n5">5º número</br><input type="number" id="ex04n5"></label><button onclick="funcEx04(ex04n1.value, ex04n2.value, ex04n3.value, ex04n4.value, ex04n5.value)">Média</button>
+      <div class="resultado" id="rEx04"></div>
+    </div>
+
+    <div>
+      <h3>05 - Escreva uma função que receba um número e imprima se ele é par ou ímpar</h3>
+      <label for="ex5n1">Número</br><input type="number" id="ex05n1" oninput="funcEx05()"></label>
+      <div class="resultado" id="rEx05"></div>
+    </div>
+
+    <div>
+      <h3>06 - Escreva um programa que vá de 0 a 100 e imprima o número na tela caso não seja múltiplo de 4. Para cada número que seja múltiplo de 4 imprima "pi" no lugar:</h3>
+      <label for=""><button onclick="funcEx06()">Iniciar</button></label>
+      <div class="resultado" id="rEx06"></div>
+    </div>
+
+    <div>
+      <h3>07 - Escreva uma função que receba um objeto e imprima suas propriedades:</h3>
+      <div class="resultado">Aplicado no Exercício 08.</div>
+    </div>
+
+    <div>
+      <h3>08 - Escreva uma função que receba uma data e retorne um objeto com as propriedades dia, mês e ano Referentes a essa data:</h3>
+      <label for=""><button onclick="gerarData()">DATA</button></label>
+      <div class="resultado" id="rEx08"></div>
+    </div>
+
+    <div>
+      <h3>09 - Escreva um programa que receba um array de objetos com as propriedades altura e idade e imprima: A maior e menor altura e a média da idade:</h3><br>
+        
+      <p>
+          <button onclick="funcEx09Gerar()">Gerar</button>
+          <label for="ex09p1">Nome<br><input type="text" id="ex09n1" class="nome"></label>
+          <label for="ex09i1">Idade<br><input type="number" id="ex09i1"></label>
+          <label for="ex09a1">Altura<br><input type="number" id="ex09a1"></label>
+          <button onclick="funcEx09Cadastrar()">Cadastrar</button>
+        </p>
+        <!-- <p>
+          <label for="ex09p1">Pessoa 1<br><input type="text" id="ex09p1" class="nome"></label>
+          <label for="ex09a1">Idade<br><input type="number" id="ex09p1"></label>
+          <label for="ex09p1">Altura<br><input type="number" id="ex09p1"></label>
+        </p><p>
+          <label for="ex09p1">Pessoa 1<br><input type="text" id="ex09p1" class="nome"></label>
+          <label for="ex09a1">Idade<br><input type="number" id="ex09p1"></label>
+          <label for="ex09p1">Altura<br><input type="number" id="ex09p1"></label>
+        </p> -->
+        <p>Pessoas Cadastradas:</p>
+        <p><label>Nomes<br>
+          <select name="regNome" id="ex09RegNome" size="5">
+          </select>
+          </label>
+          <label>Idade<br>
+            <select name="regIdade" id="ex09RegIdade" size="5">
+            </select>
+            </label>
+            <label>Altura<br>
+              <select name="regAltura" id="ex09RegAltura" size="5">
+              </select>
+            </label>
+        </p>
+          
+          <button onclick="funcEx09()">Imprimir</button>
+          <div class="resultado" id="rEx09"></div>
+    </div>
+    <div>
+      <h3>10 - Escreva um programa que imprima o seguinte padrão:</h3></br>
+        *</br>
+        * *</br>
+        * * *</br>
+        * * * *</br>
+        * * * * *</h3><br>
+        <label for="ex10n1">Quantidade de linhas:<br><input type="number" value="5" id="ex10n1"></label><label for="ex10n1"><button onclick="funcEx10()">Imprimir</button></label>
+        <div class="resultado" id="rEx10"></div>
+    </div>
+  </main>
+</body>
+<script src="script.js"></script>
+</html>
