@@ -5,7 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio HTML</title>
 </head>
+
+<script>
+
+var valor = 0;
+
+    function reg(){
+        var out = document.getElementById('out');
+        out.innerHTML = valor;
+        
+        valor = Math.random() * 100;
+        // if(valor < 99){
+        //     valor++;
+        // } else{
+        //     valor = 0;
+        // }
+    }
+
+    function cont(){
+        setInterval(reg, 100);   
+    }
+
+</script>
+
 <body>
-    123
+    
+ <button onclick="cont()">Contar</button><h1 id="out"></h1>
+
 </body>
 </html>
