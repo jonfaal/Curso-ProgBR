@@ -1,0 +1,19 @@
+@charset "UTF8";
+
+@keyframes mudaCor {
+    0% {background-color: yellow; left: 50px; top: 10px; border-radius: 0px;}
+    50% {background-color: yellowgreen; left: 400px; top: 400px; transform: rotate(1800deg); border-radius: 50%;}
+    100% {background-color: yellow; left: 50px; top: 10px; border-radius: 0px;}
+}
+
+.box{
+width: 200px;
+height: 200px;
+border: solid 1px rgb(4, 0, 255);
+position: relative;
+left: 50px;
+animation-name: mudaCor;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+}
